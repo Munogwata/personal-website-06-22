@@ -1,0 +1,21 @@
+$dektopContainer: 1022px;
+$tablet: 1022px;
+$mobile: 490px;
+$small-mobile: 320px;
+
+$large-space: 72px;
+$default-space: 36px;
+$small-space: 18px;
+$very-small-space: 8px;
+$tiny-space:4px;
+
+
+
+@mixin contentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+

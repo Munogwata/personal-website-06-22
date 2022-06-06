@@ -1,0 +1,180 @@
+@use '../abstract/Index.module.scss' as general;
+
+
+.cardBox{
+width: 485px;
+height: 191px;
+border: 1px solid general.$black;
+display: flex;
+margin-bottom: general.$small-space;
+}
+
+
+.imageBox{
+    width:172.36px;
+    height: 190px;
+    display:flex;
+    align-items: flex-end;
+    border-right: 1px solid general.$black;
+    border-bottom: 1px solid general.$black;
+    background-color: general.$white;
+}
+
+
+.thumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+.contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 312px;
+    @include general.BodyDefaultBold;
+    padding-left: 24px;
+    padding-right: 8px;
+
+
+}
+
+.subheading{
+    margin-top: general.$small-space;
+    @include general.Subheading2;
+    color: general.$black;
+    margin-bottom: general.$small-space;
+    width: 398px;
+}
+
+.subheadingHighlighted{
+    margin-top: general.$small-space;
+        @include general.Subheading2;
+        color: general.$black;
+        margin-bottom: general.$small-space;
+        background-color: general.$lilac500;
+
+}
+
+.formBox{
+    width: 397px;
+    background-color: general.$white;
+    border: 1px solid general.$black;
+    height: 377px;
+    display: flex;
+  
+   
+}
+
+.inputLabel{
+    @include general.Subheading2;
+    color: general.$black;
+    margin-left: general.$very-small-space;
+}
+
+.inputMessage{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+    min-width: 100%;
+    height: 231px;
+    border-bottom: 1px solid general.$black;
+    padding-top: 8px;
+    padding-left: general.$very-small-space;
+
+}
+
+.inputRow{
+
+    width:100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid general.$black;
+}
+
+.input{
+
+    text-decoration: none;
+    border: none;
+    height: 30px;
+    width: 290px;
+    margin-left: 4px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: space-between;
+}
+
+.submitButton{
+    @include general.Subheading1;
+    color: general.$lilac500;
+    margin: general.$very-small-space;
+    border: none;
+    background-color: general.$white;
+
+}
+
+@media (max-width:general.$mobile){
+    .cardBox{
+        width: 300px;
+    }
+
+        .imageBox {
+            width: 107px;
+   
+        }
+    
+        .contentBox {
+        width:194px;
+    
+    
+        }
+
+                .subheading {
+                    margin-top: general.$small-space;
+                    @include general.Subheading2;
+                    color: general.$black;
+                    margin-bottom: general.$small-space;
+                    width: 300px;
+                }
+
+              
+
+
+                .formBox {
+                    width: 300px;
+                    background-color: general.$white;
+                    border: 1px solid general.$black;
+                    height: 377px;
+                    display: flex;
+        
+        
+                }
+        
+                .inputLabel {
+                    @include general.Subheading2;
+                    color: general.$black;
+                    margin-left: general.$very-small-space;
+                }
+        
+           
+                .input {
+        
+                    text-decoration: none;
+                    border: none;
+                    height: 30px;
+                    width: 200px;
+                    margin-left: 4px;
+                }
+        
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    align-content: space-between;
+                }
+}

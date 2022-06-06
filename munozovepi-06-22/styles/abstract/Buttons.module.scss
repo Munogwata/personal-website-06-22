@@ -1,0 +1,34 @@
+@use '../abstract/Colors.module.scss' as general;
+@use '../abstract/Breakpoints.module.scss' as breakpoint;
+@use '../abstract/Typefaces.module.scss' as typeface;
+
+
+@mixin button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    border: none;
+    margin-top: breakpoint.$small-space;
+    @include typeface.BodyDefaultBold;
+}
+
+.openButton {
+    @include button;
+    background-color: general.$blue500;
+
+}
+
+.closedButton{
+    @include button;
+        background-color: general.$green500;
+}
+
+.closedButtonHidden{
+    @include button;
+        background-color: general.$green500;
+        visibility: hidden;
+}
+

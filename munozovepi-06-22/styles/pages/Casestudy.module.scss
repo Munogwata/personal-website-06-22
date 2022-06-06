@@ -1,0 +1,123 @@
+@use '../abstract/Index.module.scss' as general;
+
+.page {
+    width: 100%;
+    background-color: general.$neutral;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.desktopContainer {
+    width: general.$dektopContainer;
+    
+}
+
+.screenshots{
+    width:100%;
+   box-shadow: 0px 1px 3px rgba(30, 30, 30, 0.09);
+   background-color: general.$white;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   height: 381px;
+   margin-top: general.$default-space;
+
+}
+
+.title{
+    @include general.Subheading1;
+    text-decoration: underline;
+    margin-top: general.$small-space;
+    color: general.$green800;
+}
+
+.caption{
+    @include general.Subheading2;
+    margin-top: general.$small-space;
+    color: general.$black;
+}
+
+.body{
+    @include general.BodyDefault;
+    color:general.$black;
+    margin-top: general.$small-space;
+    text-align: justify;
+   // margin-bottom: general.$small-space;
+}
+
+.bodyBold {
+    @include general.BodyDefaultBold;
+    color: general.$black;
+    margin-top: general.$small-space;
+    text-align: justify;
+}
+
+.bodySmall{
+    @include general.BodySmall;
+        color: general.$black;
+        margin-top: general.$small-space;
+        text-align: justify;
+        display: block;
+        margin-bottom: general.$default-space;
+}
+.bodySmallUnderline {
+    @include general.BodySmall;
+    color: general.$black;
+    margin-top: general.$small-space;
+    text-align: justify;
+    margin-bottom: general.$default-space;
+    text-decoration: underline;
+}
+
+.subtitle{
+    margin-top: general.$small-space;
+    @include general.BodyDefaultBold;
+    color: general.$green800;
+    text-decoration: underline;
+}
+
+.icon{
+    width: 14px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+.button{
+    width: fit-content;
+    padding:4px;
+    margin-top: general.$tiny-space;
+    @include general.BodySmallBold;
+    background-color: general.$neutral;
+    border: none;
+
+}
+
+.image{
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@media (max-width:general.$tablet) {
+
+.desktopContainer {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 36px;
+
+    }
+    
+}
+
+@media (max-width:general.$small-mobile) {
+
+    .desktopContainer {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 36px;
+
+    }
+
+}

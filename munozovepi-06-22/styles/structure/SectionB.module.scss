@@ -1,0 +1,389 @@
+@use "../abstract/Index.module.scss" as general;
+
+.singleColumn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsContainer {
+  width: 1005px;
+  height: 616px;
+  border-radius: 5px;
+  background-color: general.$white;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 1px 3px rgba(30, 30, 30, 0.09);
+  margin-top: general.$small-space;
+  //justify-content: space-between;
+}
+
+
+.line {
+  border-left: 1px solid black;
+  height: 480px;
+}
+
+.containerHeight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionHeading {
+  @include general.Subheading1;
+  color: general.$green800;
+  padding-top: general.$default-space;
+}
+
+.tabRow {
+  width: 691px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.tabDeactive {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 32px;
+  color: general.$black;
+  @include general.tabText;
+  border: 1px solid general.$black;
+  border-radius: 8px;
+  background-color: general.$neutral;
+  margin-top: general.$small-space;
+}
+
+.tabActive {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 32px;
+  background-color: general.$blue500;
+  color: general.$green800;
+  @include general.tabText;
+  border: 1px solid general.$green800;
+  border-radius: 8px;
+  margin-top: general.$small-space;
+}
+
+.summaryContainer {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.summaryBody {
+  width: 263px;
+  @include general.BodyDefault;
+  color: general.$black;
+  padding-top: general.$default-space;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: general.$small-space;
+}
+.headingContainer {
+  @include general.BodyDefault;
+  width: fit-content;
+  height: auto;
+  padding: 4px;
+  background-color: general.$blue500;
+  color: general.$black;
+  text-decoration: underline;
+  margin-top: general.$default-space;
+}
+
+.experienceRow {
+  width: 576px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: general.$small-space;
+}
+
+.experienceContentRow {
+  width: 541px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceHeading {
+  @include general.BodySmallBold;
+  padding-bottom: general.$tiny-space;
+  color: general.$black;
+}
+
+.experienceContent {
+  @include general.BodySmall;
+  padding-bottom: general.$tiny-space;
+  color: general.$black;
+}
+
+.imageKit {
+  margin-top: general.$default-space;
+  width: 480px;
+  height: auto;
+}
+
+.referenceContainer {
+  @include general.BodySmallSemiBold;
+  color: general.$black;
+  display: flex;
+  margin-top: general.$small-space;
+  width: 100%;
+}
+
+.referenceListContainer {
+  flex-direction: column;
+  @include general.BodySmall;
+  color: general.$black;
+  display: flex;
+
+  width: 140px;
+}
+
+.referenceHeading {
+  margin-top: general.$default-space;
+  @include general.BodySmallSemiBold;
+}
+
+.bulletList {
+  @include general.BodySmallSemiBold;
+  margin-right: 20px;
+}
+
+.imageTabletKit {
+  margin-top: general.$default-space;
+  display: none;
+  width: 340px;
+  height: auto;
+}
+
+.imageMobileKit {
+  margin-top: general.$default-space;
+  display: none;
+  width: 250px;
+  height: auto;
+}
+
+.personalwebContainer {
+  width: 511px;
+  display: flex;
+  flex-direction: column;
+  @include general.BodyDefaultBold;
+  margin-top: general.$small-space;
+}
+
+
+
+@media (max-width: general.$tablet) {
+  .tabRow {
+    width: fit-content;
+    display: flex;
+    //justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .imageTabletKit {
+    margin-top: general.$default-space;
+    display: flex;
+    width: 340px;
+    height: auto;
+  }
+
+  .bulletList {
+    @include general.BodySmallSemiBold;
+    margin-right: 20px;
+  }
+
+  .summaryContainer {
+    width: 450px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: general.$small-space;
+  }
+
+.personalwebContainer {
+  width: 450px;
+
+}
+
+
+  .summaryBody {
+    width: 100%;
+  }
+
+  .headingContainer {
+    @include general.BodyDefault;
+    margin-right: 16px;
+  }
+
+  .skillsContainer {
+    width: 482px;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: general.$white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+
+  .referenceContainer {
+    @include general.BodySmallSemiBold;
+    color: general.$black;
+    display: flex;
+    margin-top: general.$small-space;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .containerHeight {
+    display: none;
+  }
+
+  .imageKit {
+    margin-top: general.$default-space;
+    width: 480px;
+    height: auto;
+  }
+
+  .experienceRow {
+    width: 450px;
+    height: auto;
+    display: flex;
+    margin-top: general.$small-space;
+  }
+
+  .experienceContentRow {
+    width: 420px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+  }
+
+  .sectionHeading {
+    width: 482px;
+  }
+
+  .imageKit {
+    display: none;
+  }
+}
+
+
+
+
+@media (max-width: general.$mobile) {
+  .imageKit {
+    display: none;
+  }
+
+    .personalwebContainer {
+      width: 300px;
+  
+    }
+
+  .imageKit {
+    display: none;
+  }
+
+  .imageTabletKit {
+    display: none;
+  }
+
+  .imageMobileKit {
+    display: flex;
+    width: 250px;
+    height: auto;
+  }
+
+  .tabRow {
+    width: fit-content;
+    display: flex;
+    //justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .skillsContainer {
+    width: 300px;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: general.$white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+
+  .containerHeight {
+    display: none;
+  }
+
+  .imageKit {
+    margin-top: general.$default-space;
+    width: 480px;
+    height: auto;
+  }
+
+  .experienceRow {
+    width: 250px;
+    height: auto;
+    display: flex;
+    margin-top: general.$small-space;
+  }
+
+  .experienceContentRow {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+  }
+
+  .sectionHeading {
+    width: 300px;
+  }
+
+  .summaryContainer {
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: general.$small-space;
+  }
+
+  .summaryBody {
+    width: 100%;
+  }
+  .bulletList {
+    @include general.BodySmallSemiBold;
+    margin-right: 20px;
+    //margin-left:0px
+  }
+
+  .headingContainer {
+    @include general.BodyDefault;
+    width: 250px;
+    height: auto;
+    padding: 4px;
+    background-color: general.$blue500;
+    color: general.$black;
+    text-decoration: underline;
+    margin-top: general.$default-space;
+  }
+}

@@ -1,0 +1,339 @@
+@use "../abstract/Index.module.scss" as general;
+
+.homePage {
+  width: 100%;
+  background-color: general.$neutral;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.desktopContainer {
+  width: general.$dektopContainer;
+  @include general.contentContainer;
+}
+
+.pageRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftColumn {
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rightColumn {
+  width: 50%;
+  flex-direction: column;
+align-items: flex-end;
+  display: flex;
+  //justify-content: flex-end;
+}
+
+.heading1 {
+  @include general.Heading1;
+  color: general.$black;
+  padding-top: general.$default-space;
+}
+
+.subheading {
+  @include general.Subheading1;
+  color: general.$green800;
+  padding-top: general.$small-space;
+}
+
+.boldBody {
+  @include general.BodyDefaultBold;
+  color: general.$black;
+  padding-top: general.$small-space;
+}
+
+.boldBodyGreen {
+  @include general.BodyDefaultBold;
+  color: general.$green800;
+  //padding-top: general.$very-small-space;
+}
+
+.boldBodyLilac {
+  @include general.BodyDefaultBold;
+  color: general.$lilac500;
+  padding-top: general.$small-space;
+}
+
+.regularBody {
+  @include general.BodyDefault;
+  color: general.$black;
+  padding-top: general.$small-space;
+  padding-bottom: general.$small-space;
+}
+
+.column {
+  width: 482px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonLabel {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.articleCards {
+  display: flex;
+  flex-direction: column;
+  padding: general.$small-space;
+  width: 484px;
+  height: 140px;
+  background-color: general.$white;
+  box-shadow: 0px 1px 3px rgba(30, 30, 30, 0.09);
+  border-radius: 5px;
+  margin-top: general.$small-space;
+}
+
+.linkRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardImage {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.cardImageHidden {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  visibility: hidden;
+  display: flex;
+}
+.cardRowHeading {
+  @include general.BodyDefaultBold;
+  color: general.$green800;
+  padding-bottom: general.$very-small-space;
+  display: flex;
+  align-items: center;
+}
+
+.cardIcon {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.cardIcon:hover {
+  background-image: url("/article/call_made-pink.png");
+}
+
+.cardLink:hover {
+  color: general.$lilac500;
+}
+
+.cardRowContent {
+  @include general.BodySmallUnderline;
+  color: general.$green800;
+  padding-bottom: general.$very-small-space;
+  display: flex;
+  text-decoration-color: general.$green800;
+  align-items: flex-end;
+}
+
+.sideSectionBox {
+  margin-top: general.$default-space;
+  width: 392px;
+  min-height: 1100px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideHeading {
+  height: 52px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  @include general.Subheading1;
+  color: general.$lilac500;
+  padding-left: general.$small-space;
+}
+
+.imageSideBar {
+  height: 100%;
+  padding: 20px;
+ 
+  object-fit: contain;
+}
+
+.sideImage {
+  width: 100%;
+  height: 286px;
+  background-color: general.$white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.sideBarTitle {
+  @include general.Subheading2;
+  padding-left: general.$small-space;
+  padding-top: general.$small-space;
+}
+
+.sideBarTagline {
+  @include general.BodyDefault;
+  color: general.$green800;
+  padding-left: general.$small-space;
+  padding-top: general.$small-space;
+}
+.sideBarContent {
+  padding-left: general.$small-space;
+  padding-right: general.$small-space;
+}
+.sidebarBody {
+  @include general.BodyDefault;
+  color: general.$black;
+  padding-top: general.$small-space;
+  padding-bottom: general.$small-space;
+  display: flex;
+}
+
+.linkTextButton{
+margin-left: general.$small-space;
+background-color: general.$blue500;
+width: 162px;
+display: flex;
+margin-top: general.$small-space;
+@include general.BodyDefaultBold;
+text-decoration: underline
+}
+
+.linkTextPlainButton {
+
+  background-color: general.$blue500;
+  width: 162px;
+  display: flex;
+  margin-top: general.$small-space;
+  @include general.BodyDefaultBold;
+  text-decoration: underline
+}
+
+.internalLink
+
+
+.internalLink:hover{
+color: general.$lilac500;
+}
+.emptyLastRow{
+  background-color: general.$neutral;
+  height:72px;
+  display: block;
+}
+
+.dividerFull{
+  width: 100%;
+  border-top: 1px solid general.$black;
+  display:block;
+ // margin-top: general.$default-space;
+  background-color: general.$neutral;
+}
+
+.caption{
+  @include general.BodySmall;
+  color: general.$black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+    background-color: general.$neutral;
+    padding-top: general.$small-space;
+    padding-bottom: general.$small-space;
+
+}
+
+@media (max-width: general.$tablet) {
+  .homePage {
+    flex-direction: column;
+    min-height: 760px;
+  }
+
+  .desktopContainer {
+    width: 100%;
+    @include general.contentContainer;
+  }
+
+  .pageRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .rightColumn {
+    width: 100%;
+align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+     .sideSectionBox {
+       width: 300px;
+       padding-bottom: 16px;
+     }
+}
+
+@media (max-width: general.$mobile) {
+  .column {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articleCards {
+    width: 300px;
+    height: auto;
+  }
+
+  .cardImageHidden {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    visibility: hidden;
+    display: none;
+  }
+
+  .sideSectionBox {
+    width: 300px;
+    padding-bottom: 16px;
+  }
+
+  .homePage {
+    
+      min-height: 760px;
+    
+  }
+
+        .rightColumn {
+          width: 100%;
+    align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+}
